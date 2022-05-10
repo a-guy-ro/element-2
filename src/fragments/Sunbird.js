@@ -43,6 +43,9 @@ function Pages() {
           <audio controls style={{width:'90%', marginLeft:'5%'}}>
             <source src={bird} type='audio/mpeg'></source>
           </audio>
+          <p>
+            {'(These archival recordings, experiments by the late Israeli radio and sound artist Ilana Zuckerman for her piece Bird on Bird. The piece included Wallach\'s poem Idendtity Issues)'}
+          </p>
           </div>
           </div>
           </Scroll>
