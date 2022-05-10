@@ -4,14 +4,14 @@ module.exports = {
     title: "test",
   },
   plugins: [
-    "gatsby-plugin-mdx",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
-    },
+    // "gatsby-plugin-mdx",
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "pages",
+    //     path: "./src/pages/",
+    //   },
+    //   __key: "pages",
+    // },
   ],
 };
