@@ -8,8 +8,6 @@ import bird from '../audio/bird_ilanaZuckerman.mp3'
 
 function Pages() {
   const engBird = 'Identity Issues - Yona Wallach\n \nBird what are you singing\nsomeone else\nis singing from your throat\nsomeone else\nhas written your song\nsinging at home\nthrough your throat.\n bird bird\n what are you singing\nsomeone else is singing\nthrough your throat.';
-  const engBirdPar = engBird.split('\n');
-  console.log(engBirdPar);
   const hebBird = 'בעיות זהות - יונה וולך \n\n ציפור מה את מזמרת  \nמישהו אחר  \nמזמר מגרונך  \nמישהו אחר \nחיבר את שירך \nשר בבית \nדרך גרונך. \nציפור ציפור \nמה את שרה \nמישהו אחר שר \nדרך גרונך.';
   return (
     <>

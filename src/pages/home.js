@@ -91,7 +91,7 @@ function Caption({ children,position, name, ...props}) {
     onPointerOut={(event) => setHover(false)}
       position={!clicked?position:name==='datesPlamed'?[1.5,0,0.5]:[1.5,0,0.5]}
       lineHeight={1.2}
-      font={fontUrl}
+      font="Merriweather Sans"
       fontSize={clicked?width/53.5:width / 75}
       material-toneMapped={false}
       anchorX="center"
@@ -141,12 +141,12 @@ function Home() {
   return (
     
     <div style={{height:`100%`, backgroundColor:'black'}}>
-      <style>
+      {/* <style>
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Roboto:wght@100&display=swap');
-</style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Roboto:wght@100&display=swap'); */}
+{/* </style> */}
 <a
-          style={{color:'white', fontFamily:'Roboto',fontSize:'small',zIndex:'1', position:'absolute',top:'1.5%', right:'2.5%'}}
+          style={{color:'white', fontSize:'small',zIndex:'1', position:'absolute',top:'1.5%', right:'2.5%'}}
             href="/"
             onClick={event => {
               event.preventDefault()

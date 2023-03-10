@@ -15,7 +15,7 @@ export default function Index() {
         {isLoggedIn() ? (
           <>
           <a
-          style={{color:'white', fontFamily:'Roboto',fontSize:'small',zIndex:'1', position:'absolute',top:'1.5%', right:'2.5%'}}
+          style={{color:'white',fontSize:'small',zIndex:'1', position:'absolute',top:'1.5%', right:'2.5%'}}
             href="/"
             onClick={event => {
               event.preventDefault()
@@ -34,7 +34,7 @@ export default function Index() {
         //     You should <Link to="/app/login">log in</Link> to see restricted
         //     content
         //   </p>
-        <Login  style={{fontFamily:'Roboto', color:'black', left:'35%'}}/>
+        <Login  style={{fontFamily:'Merriweather Sans', color:'black', left:'35%'}}/>
         )}
       </>
       </div>
