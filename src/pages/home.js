@@ -46,7 +46,7 @@ const CameraController = () => {
   return null;
 };
 function Caption({ children,position, name, ...props}) {
-  const fontUrl = 'https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap';
+  // const fontUl = 'https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap';
   const [clicked, setClicked] = useState(false);
   const [hover, setHover] = useState(false);
   const mesh = useRef();
