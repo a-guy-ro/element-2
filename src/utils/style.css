@@ -11,21 +11,20 @@
     overflow:auto;
     position:relative;
     display:block;
-    background-color:rgb(40, 40, 40);
-    opacity:0.75;
+    background-color:rgb(0, 0, 0);
+    opacity:0.85;
 }
 .textDiv{
     margin-top:5%; 
     margin-left:1.5%; 
     margin-right:1.5%; 
     margin-bottom:5%;
-    font-family: Merriweather Sans;
+    /* font-family: Merriweather Sans; */
 }
 
-a{
+ a{
     font-family: Merriweather Sans;
-}
-
+} 
 iframe,p,img,audio,video{
     margin-top: 5%;
 }

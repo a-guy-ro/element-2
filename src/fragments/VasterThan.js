@@ -2,18 +2,18 @@ import React, { Suspense} from "react"
 import { Html, ScrollControls,Scroll } from '@react-three/drei'
 import css from '../utils/style.css'
 
-function Pages() {
+function Pages({fontFamilyChosen}) {
   return (
     <>
         <ScrollControls
         // position={[0,0,0]}
         pages={4} // Each page takes 100% of the height of the canvas
         distance={1} // A factor that increases scroll bar travel (default: 1)
-        damping={3} // Friction, higher is faster (default: 4)
+        damping={4.5} // Friction, higher is faster (default: 4)
         horizontal={false} // Can also scroll horizontally (default: false)
         infinite={false} // Can also scroll infinitely (default: false)
         >
-          <Scroll html style={{top:'25%',left:'5%',fontFamily: 'Roboto',width: '40%',  position:'relative', textAlign: "left", color:'white' }}>
+          <Scroll html style={{top:'25%',left:'5%',width: '40%', fontFamily : fontFamilyChosen, position:'relative', textAlign: "left", color:'white' }}>
               <div className='backgroundDiv'>
                 <div className='textDiv'>
               <p >
@@ -43,12 +43,12 @@ function Pages() {
 }
 
 
-export default function VasterThan() {
+export default function VasterThan({fontFamilyChosen}) {
   return (
     <>
       <group>
         {/* <Suspense fallback={<Html as='div' className="loading" children="Loading..." />}>  */}
-          <Pages />
+          <Pages fontFamilyChosen = {fontFamilyChosen}/>
          {/* </Suspense> */}
       </group>
       {/* <Html as='div' className="scrollArea" ref={scrollArea} onScroll={onScroll}>

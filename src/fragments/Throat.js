@@ -3,18 +3,20 @@ import { Html, ScrollControls,Scroll } from '@react-three/drei'
 import css from '../utils/style.css'
 import oretha from '../images/orethaCubitt.webp'
 
-function Pages() {
+function Pages({fontFamilyChosen}) {
+  // console.log(fontFamilyChosen);
   return (
     <>
+    
         <ScrollControls
         // position={[0,0,0]}
         pages={5.5} // Each page takes 100% of the height of the canvas
         distance={1} // A factor that increases scroll bar travel (default: 1)
-        damping={3} // Friction, higher is faster (default: 4)
+        damping={4.5} // Friction, higher is faster (default: 4)
         horizontal={false} // Can also scroll horizontally (default: false)
         infinite={false} // Can also scroll infinitely (default: false)
         >
-          <Scroll html style={{top:'25%',left:'5%',fontFamily: 'Roboto',width: '40%',  position:'relative', textAlign: "left", color:'white' }}>
+          <Scroll html style={{top:'25%',left:'5%',fontFamily: 'Merriweather Sans',width: '40%',  position:'relative', textAlign: "left", color:'white' }}>
               <div className='backgroundDiv'>
               <div className='textDiv'>
               <iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/234533327&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
@@ -47,12 +49,12 @@ function Pages() {
 }
 
 
-export default function Throat() {
+export default function Throat({fontFamilyChosen}) {
   return (
     <>
       <group>
         {/* <Suspense fallback={<Html as='div' className="loading" children="Loading..." />}>  */}
-          <Pages />
+          <Pages fontFamilyChosen={fontFamilyChosen}/>
          {/* </Suspense> */}
       </group>
       {/* <Html as='div' className="scrollArea" ref={scrollArea} onScroll={onScroll}>

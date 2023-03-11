@@ -6,7 +6,7 @@ import PSpost from '../images/palestineSunbirdPS.jpeg'
 import bird from '../audio/bird_ilanaZuckerman.mp3'
 // import {Text} from "react-native"
 
-function Pages() {
+function Pages({fontFamilyChosen}) {
   const engBird = 'Identity Issues - Yona Wallach\n \nBird what are you singing\nsomeone else\nis singing from your throat\nsomeone else\nhas written your song\nsinging at home\nthrough your throat.\n bird bird\n what are you singing\nsomeone else is singing\nthrough your throat.';
   const hebBird = 'בעיות זהות - יונה וולך \n\n ציפור מה את מזמרת  \nמישהו אחר  \nמזמר מגרונך  \nמישהו אחר \nחיבר את שירך \nשר בבית \nדרך גרונך. \nציפור ציפור \nמה את שרה \nמישהו אחר שר \nדרך גרונך.';
   return (
@@ -15,11 +15,11 @@ function Pages() {
         // position={[0,0,0]}
         pages={5.75} // Each page takes 100% of the height of the canvas
         distance={1} // A factor that increases scroll bar travel (default: 1)
-        damping={3} // Friction, higher is faster (default: 4)
+        damping={4.5} // Friction, higher is faster (default: 4)
         horizontal={false} // Can also scroll horizontally (default: false)
         infinite={false} // Can also scroll infinitely (default: false)
         >
-          <Scroll html style={{top:'25%',left:'5%',fontFamily: 'Roboto',width: '40%',  position:'relative', textAlign: "left", color:'white' }}>
+          <Scroll html style={{top:'25%',left:'5%',fontFamily: fontFamilyChosen,width: '40%',  position:'relative', textAlign: "left", color:'white' }}>
               <div className='backgroundDiv'>
               <div className='textDiv'>
               <iframe width="560" height="315" src="https://www.youtube.com/embed/DxURDZVnaMc?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullscreen></iframe>
@@ -71,12 +71,12 @@ function Pages() {
 }
 
 
-export default function Sunbird() {
+export default function Sunbird({fontFamilyChosen}) {
   return (
     <>
       <group>
         {/* <Suspense fallback={<Html as='div' className="loading" children="Loading..." />}>  */}
-          <Pages />
+          <Pages fontFamilyChosen={fontFamilyChosen}/>
          {/* </Suspense> */}
       </group>
       {/* <Html as='div' className="scrollArea" ref={scrollArea} onScroll={onScroll}>

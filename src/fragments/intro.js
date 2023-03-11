@@ -6,7 +6,7 @@ import { Html, ScrollControls,Scroll } from '@react-three/drei'
 // import "./styles.css"
 import css from '../utils/style.css'
 
-function Pages() {
+function Pages({fontFamilyChosen}) {
 //   const textures = useLoader(TextureLoader, state.images)
 //   const [img1, img2, img3] = textures.map(texture => ((texture.minFilter = LinearFilter), texture))
   return (
@@ -18,11 +18,11 @@ function Pages() {
         // position={[0,0,0]}
         pages={4} // Each page takes 100% of the height of the canvas
         distance={1} // A factor that increases scroll bar travel (default: 1)
-        damping={3} // Friction, higher is faster (default: 4)
+        damping={4.5} // Friction, higher is faster (default: 4)
         horizontal={false} // Can also scroll horizontally (default: false)
         infinite={false} // Can also scroll infinitely (default: false)
         >
-          <Scroll html style={{top:'25%',left:'5%',fontFamily: 'Roboto',width: '40%',  position:'relative', textAlign: "left", color:'white'}}>
+          <Scroll html style={{top:'25%',left:'5%',fontFamily: fontFamilyChosen,width: '40%',  position:'relative', textAlign: "left", color:'white'}}>
               <div className='backgroundDiv'>
               <div className='textDiv'>
               <p>
@@ -49,7 +49,7 @@ function Pages() {
 }
 
 
-export default function Intro() {
+export default function Intro({fontFamilyChosen}) {
 //   const scrollArea = useRef();
 //   const mesh = useRef();
 //   const onScroll = e => (state.top.current = e.target.scrollTop);
@@ -58,7 +58,7 @@ export default function Intro() {
     <>
       <group>
         <Suspense fallback={<Html as='div' className="loading" children="Loading..." />}> 
-          <Pages />
+          <Pages fontFamilyChosen = {fontFamilyChosen}/>
           {/* <Startup /> */}
          </Suspense>
       </group>

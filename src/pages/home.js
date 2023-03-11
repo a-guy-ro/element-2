@@ -24,6 +24,9 @@ const yRotate = randomNumber(-0.3,0.3);
 const floatingPositions = [[4,-0.5,-4],[-5,-1.5,-8],[-3,0.5,-6],[0,3,-10],[2,1,-2],[0.5,-2,-3.4]];
 const randomFloatingPositions = floatingPositions.map(pos=>[pos[0]+randomNumber(-0.2,0.5),pos[1]+randomNumber(-0.2,0.2),pos[2]+randomNumber(-1,2)]);
 console.log(floatingPositions);
+const fontFamilyChosen = 'Merriweather Sans'
+// 'Roboto'
+
 // floatingPositions.forEach(pos=>{
 //   pos.forEach(p=>p=(p+Math.random()*0.03* Math.random() < 0.5 ? -1 : 1))
 // })
@@ -91,7 +94,7 @@ function Caption({ children,position, name, ...props}) {
     onPointerOut={(event) => setHover(false)}
       position={!clicked?position:name==='datesPlamed'?[1.5,0,0.5]:[1.5,0,0.5]}
       lineHeight={1.2}
-      font="Merriweather Sans"
+      font={fontFamilyChosen}
       fontSize={clicked?width/53.5:width / 75}
       material-toneMapped={false}
       anchorX="center"
@@ -107,12 +110,12 @@ function Caption({ children,position, name, ...props}) {
       {children}
       {/* <Html as='span'style={{position:'relative', width:'100%',cursor:'pointer'}}/> */}
     </Text>
-    {clicked && name==='intro' && <Intro/>}
-    {clicked && name==='vasterThan' && <VasterThan/>}
-    {clicked && name==='sunbrids' && <Sunbird/>}
-    {clicked && name==='datesPlamed' && <DatesPalmed/>}
-    {clicked && name==='throat' && <Throat/>}
-    {clicked && name==='furtherReading' && <Further/>}
+    {clicked && name==='intro' && <Intro fontFamilyChosen ={fontFamilyChosen}/>}
+    {clicked && name==='vasterThan' && <VasterThan fontFamilyChosen ={fontFamilyChosen}/>}
+    {clicked && name==='sunbrids' && <Sunbird fontFamilyChosen ={fontFamilyChosen}/>}
+    {clicked && name==='datesPlamed' && <DatesPalmed fontFamilyChosen ={fontFamilyChosen}/>}
+    {clicked && name==='throat' && <Throat fontFamilyChosen ={fontFamilyChosen}/>}
+    {clicked && name==='furtherReading' && <Further fontFamilyChosen ={fontFamilyChosen}/>}
     {/* <Rig clicked={clicked}/> */}
     </mesh>
   )

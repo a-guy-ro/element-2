@@ -5,18 +5,18 @@ import plantMorphology from '../images/plantMorphology.png'
 import abbasAkhvan from '../images/abbasAkhvan.jpeg'
 import britishMuseum from '../videos/biritshMuseum.mp4'
 
-function Pages() {
+function Pages({fontFamilyChosen}) {
   return (
     <>
         <ScrollControls
         // position={[0,0,0]}
         pages={9.5} // Each page takes 100% of the height of the canvas
         distance={1} // A factor that increases scroll bar travel (default: 1)
-        damping={3} // Friction, higher is faster (default: 4)
+        damping={4.5} // Friction, higher is faster (default: 4)
         horizontal={false} // Can also scroll horizontally (default: false)
         infinite={false} // Can also scroll infinitely (default: false)
         >
-          <Scroll html style={{ top:'25%',left:'5%',fontFamily: 'Roboto',width: '40%',  position:'relative', textAlign: "left", color:'white' }}>
+          <Scroll html style={{ top:'25%',left:'5%',fontFamily: fontFamilyChosen,width: '40%',  position:'relative', textAlign: "left", color:'white' }}>
               <div className='backgroundDiv'>
               <div className='textDiv'>
                 
@@ -81,12 +81,12 @@ function Pages() {
 }
 
 
-export default function DatesPalmed() {
+export default function DatesPalmed({fontFamilyChosen}) {
   return (
     <>
       <group>
         {/* <Suspense fallback={<Html as='div' className="loading" children="Loading..." />}>  */}
-          <Pages />
+          <Pages fontFamilyChose = {fontFamilyChosen}/>
          {/* </Suspense> */}
       </group>
       {/* <Html as='div' className="scrollArea" ref={scrollArea} onScroll={onScroll}>
