@@ -12,11 +12,11 @@ function Pages({fontFamilyChosen}) {
         // position={[0,0,0]}
         pages={9.5} // Each page takes 100% of the height of the canvas
         distance={1} // A factor that increases scroll bar travel (default: 1)
-        damping={4.5} // Friction, higher is faster (default: 4)
+        //damping={4.5} // Friction, higher is faster (default: 4)
         horizontal={false} // Can also scroll horizontally (default: false)
         infinite={false} // Can also scroll infinitely (default: false)
         >
-          <Scroll html style={{ top:'25%',left:'5%',fontFamily: fontFamilyChosen,width: '40%',  position:'relative', textAlign: "left", color:'white' }}>
+          <Scroll html style={{ top:'25%',left:'5%',width: '40%',  position:'relative', textAlign: "left", color:'white' }}>
               <div className='backgroundDiv'>
               <div className='textDiv'>
                 
@@ -54,7 +54,7 @@ function Pages({fontFamilyChosen}) {
             {"In this sense, the circulation of fiction around our purse-carrying \ngods circulates around with the production of fiction around \nnature, or the fictional production of an image of nature. While \nthe botanical world refuses to enact fictional binaries and \ndichotomies of gender role allocation, it is still often described \nunder such terms. In fact, the botanical world operates under \nsuch a different logic than the infamous duo of male-female, \nthat science had to come up with terms such dichogamous plants, \nplants whose sexes are developed in different times, at times 'male' \nflowers develop before 'female' ones, at times the exact opposite. \nThese plants were not named transexual or non-binary plants for \ninstance, even though their taxonomy is based on the incapacity \nof their temporal reproductive organs to form a coherent bodily \nnarration. Whilst naming them as such would have brought on its \nown set of problems (that are perhaps grounded in gender being \nan embodied fiction that is wider than the existence of any specific \nreproductive organs), the insistence to keep on categorising plants \ninto 'male' and 'female' demonstrates how heteronormativity is \nprojected as a default story onto everything we come across."}
           </p>
           <img src={plantMorphology} width='100%'></img>
-          <iframe src='https://en.wikipedia.org/wiki/Plant_reproductive_morphology#Terminology' width='100%' height='315' frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullscreen></iframe>
+          <iframe src='https://en.wikipedia.org/wiki/Plant_reproductive_morphology#Terminology' width='100%' height='315' frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           <p>
             {"These pollen gods are not only stories that circulate according \nto particular currents, but they are also material stories. The very \nobjects on top of which the stories are told as a form of engravement \nare themselves the outcome of a situated material circulation. Built in \nAssyria, nowadays Iraq, these objects were excavated in the late 19th \ncentury as part of a larger British interest in Mesopotamian arts at \nthe time. Their installation at the British Museum is therefore a \nmediated form of displacement that wraps them in another layer \nof history perhaps hidden in plain sight. In this sense, the purse-carrying \ngods are also carriers of contemporary discourse around repatriations \nof artefacts looted or taken during Europe's colonial period. More \nspecifically, and in accordance with the latest bloodsheds that spread \nthroughout the Middle East, these stone reliefs were often \ninstrumentalised as a justification for the holding of such artefacts \nby art institutions in the Global North, self-depicted as protectors \nof the objects from the risk of iconoclasm enacted by ISIS. Their \nplacement at British Museum speaks to a circulation operating \nunder a rigid framework of movements, that in its turn can \npotentially re-enact a specific form of narration."}
           </p>
